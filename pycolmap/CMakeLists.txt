@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(${SKBUILD_PROJECT_NAME} VERSION ${SKBUILD_PROJECT_VERSION})
 option(GENERATE_STUBS "Whether to generate stubs" ON)
-
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,7 +16,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /MP")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 endif()
-
+set(colmap_DIR "/home/cplus/projects/m.tarek_master/packages/COLMAP_repos/colmap_install/")
 find_package(colmap REQUIRED)
 
 if (CMAKE_VERSION VERSION_LESS 3.18)
